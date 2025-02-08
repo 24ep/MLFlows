@@ -1,11 +1,12 @@
+
+# กำหนดที่เก็บข้อมูล MLflow ใน Google Drive
 import mlflow
-import mlflow.sklearn
+mlflow.set_tracking_uri("file:///tmp/mlruns")  # บันทึกใน temporary directory
+
+# สร้างโมเดลและทำการบันทึก
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
-
-# กำหนดที่เก็บข้อมูลของ MLflow
-mlflow.set_tracking_uri("file:///tmp/mlruns")  # บันทึกใน temporary directory
 
 # โหลดข้อมูล
 iris = load_iris()
