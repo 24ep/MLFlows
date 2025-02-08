@@ -28,5 +28,3 @@ mlflow.log_metric("accuracy", model.score(X_test, y_test))
 # เสร็จสิ้นการติดตาม
 mlflow.end_run()
 
-# เริ่มต้น MLflow UI
-!mlflow ui --port 5000 --host 0.0.0.0
